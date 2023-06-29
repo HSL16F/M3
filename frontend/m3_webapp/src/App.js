@@ -1,83 +1,81 @@
 import logo from './logo.svg';
 import './App.css';
 import * as React from 'react';
-import {Box, Grid, Unstable_Grid2} from '@mui/material';
+import {Box, Container, Grid, Unstable_Grid2} from '@mui/material';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { styled} from '@mui/material/styles';
 
+function Item_top(props) {
+    const { sx, ...other } = props;
+    return (
+        <Box
+            sx={{
+                height: "50%",
+                width: "50%",
+                borderRadius: "8px",
+                bgcolor: "#836fc2",
+                p: 1,
+                m: 1
+            }}
+            {...other}
+        />
+    );
+}
 
+function Item_bottom(props) {
+    const { sx, ...other } = props;
+    return (
+        <Box
+            sx={{
+                height: "20%",
+                width: "97%",
+                borderRadius: "8px",
+                bgcolor: "#52af9d",
+                p: 1,
+                m: 1
+            }}
+            {...other}
+        />
+    );
+}
 
 function App() {
   return (
       <div className="App">
-          <Grid container spacing={2}>
-              <Grid item xs={2}>
+          <Container
+          sx={{
+              bgcolor: "#4a4c60",
+              height: "100vh",
+
+          }}>
+              <Grid sx={{p: 1}}>
                   <Box sx={{
-                      width: '15vw',
-                      height: '100vh',
-                      display: 'flex',
                       alignItems: 'flex-start',
-                      justifyContent: 'flex-start',
-                      border: "1px dashed grey",
+                      display: 'flex',
+                      flexDirection: 'row',
+
                   }}
                        className="boxContainer">
+                      <Item_top>Hello there</Item_top>
+                      <Item_top>Hello there</Item_top>
                   </Box>
               </Grid>
-              <Grid item xs={6}>
+              <Grid
+                  sx={{
+                      p: 1}}>
                   <Box sx={{
-                      p: 0.5,
-                      display: 'flex',
-                      width: "100vw",
-                      height: '33vh',
                       alignItems: 'flex-start',
                       justifyContent: 'flex-start',
-                      gap: '8px' }}>
-                      <Box
-                          sx={{
-                              width: "30vw",
-                              height: '30vh',
-                              display: 'flex',
-                              alignItems: 'flex-start',
-                              justifyContent: 'flex-start',
-                          }}
-                          className="boxContainer">
-                              Company info:
-                          ajdasjdajdaijdajdasdijaodj adiajdpasjd
-                          Add API call with information here
-                      </Box>
-                      <Box
-                          sx={{
-                              width: "48vw",
-                              height: '30vh',
-                              display: 'flex',
-                              alignItems: 'flex-start',
-                              justifyContent: 'flex-start',
-                          }}
-                          className="boxContainer">
-                          Graph goes here
-                      </Box>
-                  </Box>
-                  <Box
-                      sx={{
-                          m: "8px",
-                          width: "80vw",
-                          height: '60vh',
-                          display: 'flex',
-                          alignItems: 'flex-start',
-                          justifyContent: 'flex-start',
-                      }}
-                      className="boxContainer">
-                      Competitive intelligence
+                  }}
+                       className="boxContainer">
+                      <Item_bottom>Test 1</Item_bottom>
+                      <Item_bottom>Test 2</Item_bottom>
+                      <Item_bottom>Test 3</Item_bottom>
+                      <Item_bottom>Test 5</Item_bottom>
                   </Box>
               </Grid>
-          </Grid>
-
-
-          <Typography>
-              WIP Website
-          </Typography>
-
+          </Container>
       </div>
   );
 }
