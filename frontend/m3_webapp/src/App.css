@@ -29,11 +29,11 @@
 }
 
 .boxContainer {
-  padding: 16px;
-  background-color: #9367bd;
-  text-align: center;
+  background-color: #c9a7e8;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: auto;
+  height: 45vh;
+  padding: 16px;
 }
 
 
