@@ -5,6 +5,7 @@ import {Box, Container, Grid, Unstable_Grid2} from '@mui/material';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { styled} from '@mui/material/styles';
+import StockData from "./StockData"
 
 function Item_top(props) {
     const { sx, ...other } = props;
@@ -57,7 +58,7 @@ function App() {
 
                   }}
                        className="boxContainer">
-                      <Item_top>Hello there</Item_top>
+                      <Item_top><StockData/></Item_top>
                       <Item_top>Hello there</Item_top>
                   </Box>
               </Grid>
@@ -79,8 +80,6 @@ function App() {
       </div>
   );
 }
-
-
 
 
 export default App;
