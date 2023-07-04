@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 
-function StockData() {
+function StockData({ticker}) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch("http://127.0.0.1:2000/stocks/GOOG");
+                const api_url = "http://127.0.0.1:2000/stocks/" + ticker
+                const response = await fetch(api_url);
+                console.log(api_url)
                 const jsonData = await response.json();
                 setData(jsonData);
                 setLoading(false);
