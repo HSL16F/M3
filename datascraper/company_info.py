@@ -32,8 +32,10 @@ def get_company_info(ticker):
 # 'operatingCashflow', 'earningsGrowth', 'revenueGrowth', 'grossMargins', 'ebitdaMargins', 'operatingMargins',
 # 'financialCurrency', 'trailingPegRatio']
 
+api_key = "2RLYcjcuOOHnJ1Vw5_jYdsXHTsPlDkXe"
+
 def polygon_source(ticker, news=True):
-    api_key = "2RLYcjcuOOHnJ1Vw5_jYdsXHTsPlDkXe"
+
     client = RESTClient(api_key=api_key)
 
     financials = client.get_ticker_details(ticker)
@@ -53,9 +55,29 @@ def polygon_source(ticker, news=True):
 
     return -1
 
+def polygon_news(ticker):
+    client = RESTClient(api_key=api_key)
 
-polygon_source("GOOG", news=False)
-polygon_source("AAPL", news=False)
-polygon_source("MSFT", news=False)
-polygon_source("AMZN", news=False)
-polygon_source("TSLA", news=False)
+    print(f"Recent news for {ticker}")
+    news_articles = {}
+    for (i, n) in enumerate(client.list_ticker_news(ticker, limit=5)):
+        curr_news = {"Title": n.title, "Description": n.description, "Tickers": n.tickers,
+                     "url": n.article_url, "Date": n.published_utc}
+        news_articles[i] = curr_news
+        # print(i, n)
+        # print(n.title)
+        # print(n.description)
+        # print(n.tickers)
+        # print("======================")
+        if i == 5:
+            break
+
+    return news_articles
+
+# polygon_source("GOOG", news=False)
+# polygon_source("AAPL", news=False)
+# polygon_source("MSFT", news=False)
+# polygon_source("AMZN", news=False)
+# polygon_source("TSLA", news=False)
+
+print(polygon_news("GOOG"))
