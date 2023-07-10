@@ -1,0 +1,11 @@
+Your selected colors:
+
+    Text: #c1bbae (RGB: 193, 187, 174)
+    Background: #282837 (RGB: 40, 40, 55)
+    Primary: #8080c0 (RGB: 128, 128, 192)
+    Secondary: #1a1a28 (RGB: 26, 26, 40)
+    Accent: #468f9c (RGB: 70, 143, 156)
+
+Realtime Colors link for selected colors: https://realtimecolors.com/?colors=c1bbae-282837-8080c0-1a1a28-468f9c
+
+Thanks for using RealtimeColors.com!

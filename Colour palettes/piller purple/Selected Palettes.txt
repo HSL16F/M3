@@ -1,0 +1,13 @@
+Your selected palettes:
+
+- Analogous: #8080C0 #9C7ABD #8E7DBF #8494C2 #8BA8C6
+- Monochromatic: #8080C0 #6363A1 #606085 #3F3F7E #2F2F37
+- Triadic: #8080C0 #CFAFAF #A36666 #5E825E #495549
+- Complementary: #8080C0 #B1B17C #AFAF79 #636388 #42424D
+- Split Complementary: #8080C0 #EBE0D6 #C9DBB7 #AB73AB #705170
+- Double Split Complementary: #8080C0 #B8A189 #85A366 #8CBAA3 #B09CC4
+- Square: #8080C0 #D6ADC2 #F8F8F1 #FCFDFC #F9F5FA
+- Compound: #8080C0 #967CB1 #E2D4C5 #F2F7EE #93A8BE
+- Shades: #8080C0 #6D6DB0 #5A5A96 #42425C #232329
+
+Thank you for using RealtimeColors.com!
