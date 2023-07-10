@@ -7,7 +7,7 @@ function StockData({ticker}) {
     useEffect(() => {
         async function fetchData() {
             try {
-                const api_url = "http://127.0.0.1:2000/stocks/" + ticker
+                const api_url = "https://m3_fast_api-1-z8464729.deta.app/stocks/" + ticker
                 const response = await fetch(api_url);
                 console.log(api_url)
                 const jsonData = await response.json();

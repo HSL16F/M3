@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import StockData from './StockData';
+import StockNews from "./stock_news";
 
-const ticker_list = ['META', 'AAPL', 'AMZN', 'NFLX', 'GOOG'];
+const ticker_list = ['META', 'AAPL', 'AMZN', 'NFLX', 'GOOG', 'BHP', 'CSL'];
 
 function TickerAutocomplete() {
     const [selectedTicker, setSelectedTicker] = useState('');
@@ -30,6 +31,11 @@ function TickerAutocomplete() {
 
             {selectedTicker && (
                 <StockData key={selectedTicker} ticker={selectedTicker} />
+
+            )}
+            {selectedTicker && (
+                <StockNews key={selectedTicker} ticker={selectedTicker} />
+
             )}
         </div>
     );

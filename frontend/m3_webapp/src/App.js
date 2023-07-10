@@ -10,6 +10,7 @@ import Demo_page from "./pages/demo_page";
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import TickerAutocomplete from "./pages/Autocomplete_Box";
+import StockNews from "./pages/stock_news";
 
 function App() {
   return (
@@ -36,8 +37,7 @@ function App() {
           <Paper sx={{backgroundColor: "#B4A7EF"}}>
               <TickerAutocomplete/>
           </Paper>
-
-
+          <StockNews ticker="META"/>
       </Box>
 
   );
