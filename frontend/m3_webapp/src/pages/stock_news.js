@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import {Box} from "@mui/material";
+import {Typography} from '@mui/material';
+import {Link} from "@mui/material";
 
 function StockNews({ticker}) {
     const [data, setData] = useState(null);
@@ -31,36 +34,23 @@ function StockNews({ticker}) {
     }
 
     return (
-        <div>
-            <ul style={{ marginTop: "0rem" }}>
-                News article 1:
-                <li>Title: {data[0].title}</li>
-                <li>{data[0].description}</li>
-                <li>{data[0].url}</li>
-                {/*<li>Current Price: {data[0].Date}</li>*/}
-                {/*<li>Current Price: {data[0].Tickers}</li>*/}
-            </ul>
-            <ul>
-                <li>Title: {data[1].title}</li>
-                <li>{data[1].description}</li>
-                <li>{data[1].url}</li>
-            </ul>
-            <ul>
-                <li>Title: {data[2].title}</li>
-                <li>{data[2].description}</li>
-                <li>{data[2].url}</li>
-            </ul>
-            <ul>
-                <li>Title: {data[3].title}</li>
-                <li>{data[3].description}</li>
-                <li>{data[3].url}</li>
-            </ul>
-            <ul>
-                <li>Title: {data[4].title}</li>
-                <li>{data[4].description}</li>
-                <li>{data[4].url}</li>
-            </ul>
-        </div>
+            <Box sx={{m: 1}}>
+                <Typography variant="h4">News for {ticker}</Typography>
+                {data.map((data) => (
+                    <p key={data.id}>
+                        <Typography
+                            variant="h5"
+                            sx={{
+                            marginTop: "1rem",
+                            marginBottom: "0rem",
+                            marginLeft: "2px",
+                            marginRight: "2px",
+                        }}>{data.title}</Typography>
+                        <Typography>{data.description}</Typography>
+                        <Link href={data.url}>{data.url}</Link>
+                    </p>
+                ))}
+            </Box>
     );
 }
 

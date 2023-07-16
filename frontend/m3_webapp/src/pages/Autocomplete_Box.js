@@ -3,6 +3,8 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import StockData from './StockData';
 import StockNews from "./stock_news";
+import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
 
 const ticker_list = ['META', 'AAPL', 'AMZN', 'NFLX', 'GOOG', 'BHP', 'CSL'];
 
@@ -19,12 +21,12 @@ function TickerAutocomplete() {
     }, [selectedTicker]);
 
     return (
-        <div>
+        <Box sx={{display: "flex", alignContent: "flex-start"}}>
             <Autocomplete
                 disablePortal
                 id="combo-box-demo"
                 options={ticker_list}
-                sx={{ width: 300 }}
+                sx={{ width: "10vw", height: '100vh'}}
                 renderInput={(params) => <TextField {...params} label="Select a ticker" />}
                 onInputChange={handleInputChange}
             />
@@ -37,7 +39,7 @@ function TickerAutocomplete() {
                 <StockNews key={selectedTicker} ticker={selectedTicker} />
 
             )}
-        </div>
+        </Box>
     );
 }
 

@@ -11,33 +11,38 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import TickerAutocomplete from "./pages/Autocomplete_Box";
 import StockNews from "./pages/stock_news";
+import company_info from "./pages/company_info";
+import CompanyInfo from "./pages/company_info";
 
 function App() {
   return (
-      <Box
-          sx={{
-            display: 'flex',
-            '& > :not(style)': {
-              m: 1,
-              p: 2
-            },
-          }}
-      >
-        <Paper sx={{
-          backgroundColor: "#B4A7EF"
-        }}>
-          <StockData ticker="META"/>
-          </Paper>
-        <Paper sx={{
-          backgroundColor: "#5E825E"
-        }}>
-          <StockData ticker="GOOG"/>
-        </Paper>
+      <Box sx={{display: "flex", }}>
+          {/*<Box sx={{height: "100vh", width: "80vw", backgroundColor: "#5E825E",*/}
+          {/*display: "flex", alignContent: "flex-start"}}>*/}
+              {/*<Paper sx={{*/}
+              {/*  backgroundColor: "#B4A7EF",*/}
+              {/*    height: '100vh',*/}
+              {/*    width: '30vw'*/}
 
-          <Paper sx={{backgroundColor: "#B4A7EF"}}>
-              <TickerAutocomplete/>
-          </Paper>
-          <StockNews ticker="META"/>
+              {/*}}>*/}
+              {/*  <StockData ticker="META"/>*/}
+              {/*  </Paper>*/}
+              {/*<Paper sx={{*/}
+              {/*    backgroundColor: "#5E825E",*/}
+              {/*    height: '100vh',*/}
+              {/*}}>*/}
+              {/*  <StockData ticker="GOOG"/>*/}
+              {/*</Paper>*/}
+
+          {/*    <Paper sx={{backgroundColor: "#B4A7EF",height: '80vh', width: "50vw"}}>*/}
+          {/*        <TickerAutocomplete/>*/}
+          {/*    </Paper>*/}
+          {/*</Box>*/}
+          {/*<Box sx={{display: 'flex',*/}
+          {/*    justifyContent: 'flex-end'}}>*/}
+          {/*    <StockNews ticker="META"/>*/}
+          {/*</Box>*/}
+          <CompanyInfo></CompanyInfo>
       </Box>
 
   );
