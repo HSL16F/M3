@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
 
 function StockData({ticker}) {
     const [data, setData] = useState(null);
@@ -30,11 +31,12 @@ function StockData({ticker}) {
     if (!data) {
         // return <div>No data available.</div>;
         return(
-            <Paper sx={{
+            <Box sx={{
                 backgroundColor: "#B4A7EF",
-                height: '40vh', width: "16vw", mt: 2, pl: "0.5vw"}}>
-                <h3 style={{ marginBottom: "0rem" }}>{ticker}</h3>
-                <ul style={{ marginTop: "0rem" }}>
+                height: '40vh', width: "20vw", mt: 2, pl: "0.5vw",
+                borderRadius: 4}}>
+                <h3 style={{marginLeft: "2%", marginBottom: "-5%"}}>{ticker}</h3>
+                <ul>
                     <li>Name: Company Name</li>
                     <li>Current Price: $100</li>
                     <li>Industry: Very cool Industry</li>
@@ -44,7 +46,7 @@ function StockData({ticker}) {
                     <li>Currency: BTC</li>
                     <li>MarketCap: 1,000,000</li>
                 </ul>
-            </Paper>
+            </Box>
         );
     }
 

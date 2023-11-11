@@ -1,51 +1,49 @@
-import React from 'react';
-import { scaleTime, scaleLinear } from '@visx/scale';
-import { AreaClosed } from '@visx/shape';
-import { AxisBottom, AxisLeft } from '@visx/axis';
-import { extent } from 'd3-array';
+import React, { useEffect, useState } from "react";
+import { XYChart, AreaSeries, Axis, Grid, Tooltip } from "@visx/xychart";
 
-const data = [
-    { date: new Date('2019-01-01'), close: 157.92 },
-    { date: new Date('2019-01-02'), close: 157.74 },
-    { date: new Date('2019-01-03'), close: 142.19 },
-    // Add more data points here...
-];
+function StockChart({ symbol }) {
+    const [stockData, setStockData] = useState([]);
 
-const width = 500;
-const height = 300;
-const margin = { top: 20, right: 20, bottom: 40, left: 40 };
+    useEffect(() => {
+        const fetchStockData = async () => {
+            try {
+                const response = await fetch(
+                    `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=1d&range=1mo`
+                );
+                const data = await response.json();
+                const timestamps = data.chart.result[0].timestamp;
+                const closePrices = data.chart.result[0].indicators.quote[0].close;
 
-function StockGraph() {
-    const xScale = scaleTime({
-        domain: extent(data, (d) => d.date),
-        range: [margin.left, width - margin.right],
-    });
+                const stockData = timestamps.map((timestamp, index) => ({
+                    date: new Date(timestamp * 1000), // Convert UNIX timestamp to JavaScript date
+                    close: closePrices[index],
+                }));
 
-    const yScale = scaleLinear({
-        domain: [0, Math.max(...data.map((d) => d.close))],
-        range: [height - margin.bottom, margin.top],
-    });
+                setStockData(stockData);
+            } catch (error) {
+                console.error("Error fetching stock data:", error);
+            }
+        };
+
+        fetchStockData();
+    }, [symbol]);
 
     return (
-        <svg width={width} height={height}>
-            <AxisBottom
-                scale={xScale}
-                top={height - margin.bottom}
-                left={margin.left}
-                label="Date"
-            />
-            <AxisLeft scale={yScale} top={margin.top} left={margin.left} label="Close Price" />
-            <AreaClosed
-                data={data}
-                x={(d) => xScale(d.date)}
-                y={(d) => yScale(d.close)}
-                yScale={yScale}
-                fill="#8884d8"
-                stroke="#8884d8"
-                strokeWidth={2}
-            />
-        </svg>
+        <div>
+            <h2>{symbol} Stock Chart</h2>
+            {stockData.length > 0 ? (
+                <XYChart height={400} width={600} xScale={{ type: 'time' }}>
+                    <Grid columns={false} numTicks={4} />
+                    <Axis orientation="bottom" />
+                    <Axis orientation="left" />
+                    <AreaSeries dataKey="close" data={stockData} />
+                    <Tooltip />
+                </XYChart>
+            ) : (
+                <p>Loading stock data...</p>
+            )}
+        </div>
     );
 }
 
-export default StockGraph;
+export default StockChart;

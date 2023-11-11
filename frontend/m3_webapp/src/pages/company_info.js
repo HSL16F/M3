@@ -6,7 +6,8 @@ import StockNews from "./stock_news";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import {ThemeProvider, createTheme } from '@mui/material/styles';
-import StockGraph from "./graphs/stock_graph";
+import appleStock, { AppleStock } from '@visx/mock-data/lib/mocks/appleStock';
+import StockChart from "./graphs/stock_graph";
 
 const ticker_list = ['META', 'AAPL', 'AMZN', 'NFLX', 'GOOG', 'BHP', 'CSL'];
 
@@ -40,6 +41,21 @@ function CompanyInfo() {
         console.log('Selected Ticker:', selectedTicker);
     }, [selectedTicker]);
 
+    const stockData = [
+        { date: new Date('2022-01-01'), close: 120 },
+        { date: new Date('2022-02-01'), close: 130 },
+        { date: new Date('2022-03-01'), close: 140 },
+        { date: new Date('2022-04-01'), close: 150 },
+        { date: new Date('2022-05-01'), close: 160 },
+        { date: new Date('2022-06-01'), close: 155 },
+        { date: new Date('2022-07-01'), close: 150 },
+        { date: new Date('2022-08-01'), close: 145 },
+        { date: new Date('2022-09-01'), close: 155 },
+        { date: new Date('2022-10-01'), close: 165 },
+    ];
+    const stock = appleStock.slice(800);
+
+
     return (
         <ThemeProvider theme={theme}>
             <Box sx={{display: "flex", flexDirection: "column"}}>
@@ -54,6 +70,7 @@ function CompanyInfo() {
                         height: "10vh", width: "12vw",
                         backgroundColor: "#468f9c",
                         m: 2,
+                        borderRadius: 2
                     }}>
                         <Autocomplete
                             disablePortal
@@ -76,10 +93,15 @@ function CompanyInfo() {
 
                     {/*)}*/}
                     <Box sx={{
-                        height: "40vh", width: "50vw",
+                        height: "40vh", width: "40vw",
                         m: 2, backgroundColor: "background.dried_lavender",
-                        borderRadius: 4}}>
-                        <StockGraph></StockGraph>
+                        borderRadius: 4,
+                        display: "flex",
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}>
+                        <StockChart symbol={"GOOG"}/>
                     </Box>
                 </Box>
 
