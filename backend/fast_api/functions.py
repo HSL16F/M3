@@ -1,28 +1,18 @@
-import fastapi.middleware.cors
+# Location for all API functions to be stored in
+
 import yfinance as yf
 from fastapi import FastAPI
 # from polygon import RESTClient
+import time
+import requests
+from bs4 import BeautifulSoup as Bs
+import re
+import pandas as pd
+import finnhub
 
 # Custom functions
-from functions import *
+from datascraper.news_scraper import company_info
 
-app = FastAPI()
-
-origins = [
-    "http://localhost",
-    "http://localhost:3000",  # Add your React app's URL here
-    "https://m3_fast_api-1-z8464729.deta.app"
-    "https://m3-puce.vercel.app/"
-    "http://127.0.0.1:2000"
-]
-
-app.add_middleware(
-    fastapi.middleware.cors.CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "DELETE"],
-    allow_headers=["*"],
-)
 
 def get_stock_data(symbol: str):
     ticker = yf.Ticker(symbol)
@@ -54,21 +44,30 @@ api_key = "2RLYcjcuOOHnJ1Vw5_jYdsXHTsPlDkXe"
 #
 #     return news_articles
 
-@app.get("/stocks/{symbol}")
-def echo(symbol: str):
-    stock_data = get_stock_data(symbol)
-    return {"symbol": symbol, "data": stock_data}
 
-@app.get("/")
-def hello_world():
-    return {"Hello": "World"}
 
-@app.get("/stock/description/{symbol}")
-def descript_call(symbol: str):
-    data = get_security_description(symbol)
-    return {"Security": symbol, "Data": data}
+def get_security_description(ticker):
+    """
+    Returns a description of the company associated with the given stock ticker.
 
-# @api.get("/news/{ticker}")
-# def news(ticker: str):
-#     news_articles = polygon_news(ticker)
-#     return news_articles
+    :param ticker: Stock ticker symbol as a string.
+    :return: A string containing the description of the company.
+    """
+    return f"Ticker: {ticker}\nDescription: {company_info(ticker)}"
+    
+
+# Get current price
+def get_price(ticker):
+    finnhub_client = finnhub.Client(api_key="clil6rpr01qvsg5971j0clil6rpr01qvsg5971jg")
+
+    return finnhub_client.quote(ticker)
+
+def get_financials(ticker):
+    finnhub_client = finnhub.Client(api_key="clil6rpr01qvsg5971j0clil6rpr01qvsg5971jg")
+
+    return finnhub_client.company_basic_financials('AAPL', 'all')
+
+
+# Example usage
+# print(get_security_description(ticker))
+# print(get_stock_data(ticker))

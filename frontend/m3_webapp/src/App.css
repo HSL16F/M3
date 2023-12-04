@@ -1,9 +1,9 @@
 /* App.css */
 :root {
-  --color-white: #FAFAFA;
-  --color-light-purple: #9F7FE4;
-  --color-dark-purple: #282138;
-  --text_grey: #4B494F;
+  --color-white: #F2F2F2;
+  --color-light-purple: #282F3C;
+  --color-dark-purple: #1E2631;
+  --text_grey: #F2F2F2;
 }
 
 html, body, #root {
@@ -11,4 +11,35 @@ html, body, #root {
   padding: 0;
   height: 100%;
   overflow: hidden; /* Prevents scrolling on the entire document */
+}
+
+/* Add this in your global CSS file or within a <style> tag in your component */
+
+/* Styles the scrollbar track */
+*::-webkit-scrollbar-track {
+  background-color: var(--color-light-purple); /* Match with your theme */
+  border-radius: 10px;
+}
+
+/* Styles the scrollbar itself */
+*::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+  background-color: transparent; /* Scrollbar background */
+}
+
+/* Styles the handle */
+*::-webkit-scrollbar-thumb {
+  background-color: var(--text_grey); /* Handle color */
+  border-radius: 10px;
+  border: 2px solid var(--color-light-purple); /* Handle border */
+}
+
+/* Handle hover and active states */
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Handle hover color */
+}
+
+* {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: var(--text_grey) var(--color-light-purple); /* For Firefox */
 }

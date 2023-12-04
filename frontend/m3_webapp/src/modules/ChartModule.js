@@ -57,7 +57,7 @@ const D3LineChartModule = ({ data, width = 500, height = 300, lineColor = 'steel
 
   return (
     <Card sx={{ maxWidth: width, backgroundColor: 'var(--color-light-purple)' }}>
-      <CardContent>
+      <CardContent sx={{color: "var(--text_grey)"}}>
         <div ref={ref} />
       </CardContent>
     </Card>

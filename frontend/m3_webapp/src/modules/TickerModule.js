@@ -6,15 +6,15 @@ import Typography from '@mui/material/Typography';
 
 const TickerModule = ({ ticker, price, description }) => {
   return (
-    <Card sx={{ minWidth: 275, backgroundColor: 'var(--color-light-purple)' }}>
+    <Card sx={{ minWidth: 275, backgroundColor: 'var(--color-light-purple)',color: "var(--text_grey)"}}>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+        <Typography sx={{ fontSize: 14, color: "var(--text_grey)" }} gutterBottom>
           Ticker
         </Typography>
         <Typography variant="h5" component="div">
           {ticker}
         </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.primary">
+        <Typography sx={{ mb: 1.5}}>
           Ticker Price: {price}
         </Typography>
         <Typography variant="body2">

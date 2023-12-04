@@ -5,6 +5,7 @@ import Grid from '@mui/material/Grid';
 import { APP_BAR_HEIGHT } from './theme'; // Import the height variable
 import TickerModule from '../modules/TickerModule';
 import D3LineChartModule from '../modules/ChartModule';
+import NewsModule from '../modules/newsModule';
 
 
 const MainContent = () => {
@@ -26,6 +27,27 @@ const MainContent = () => {
     // ... more data points
   ];
   const cardSize = { width: 500, height: 300 };
+
+  // Example RSS feed data
+  const rssFeedData = [
+    {
+      title: "Article 1",
+      pubDate: "2021-01-01T12:00:00Z",
+      description: "A brief description of Article 1."
+    },
+    {
+      title: "Article 2",
+      pubDate: "2022-01-01T12:00:005",
+      description: "A brief description of Article 2. Lorem isupm"
+    },
+    {
+      title: "Article 3",
+      pubDate: "2022-02-01T12:00:005",
+      description: "A brief description of Article 3. Lorem isupm dolor sit amet, consectetur adipiscing "
+    },
+    // ... more articles
+  ];
+
 
   return (
     <Box style={{ height: `calc(100vh - ${APP_BAR_HEIGHT}px)`, backgroundColor: 'var(--color-dark-purple)', overflow: 'auto'}}>
@@ -49,8 +71,14 @@ const MainContent = () => {
             fillColor="rgba(40, 255, 40, 0.3)" // Example: light orange fill
           />
         </Grid>
+        
     
       </Grid>
+
+    <Grid item xs={12} sm={6} md={8} lg={9}>
+      <NewsModule feed={rssFeedData} />
+    </Grid>
+
     </Box>
   );
 };
