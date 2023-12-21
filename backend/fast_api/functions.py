@@ -53,7 +53,7 @@ def get_security_description(ticker):
     :param ticker: Stock ticker symbol as a string.
     :return: A string containing the description of the company.
     """
-    return f"Ticker: {ticker}\nDescription: {company_info(ticker)}"
+    return [f"Ticker: {ticker}", f"Description: {company_info(ticker)}"]
     
 
 # Get current price
