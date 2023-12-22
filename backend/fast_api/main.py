@@ -66,7 +66,7 @@ def hello_world():
 @app.get("/stock/description/{symbol}")
 def descript_call(symbol: str):
     data = get_security_description(symbol)
-    return {"Security": symbol, "Data": data}
+    return {"Security": symbol.upper(), "Data": data}
 
 # @api.get("/news/{ticker}")
 # def news(ticker: str):
