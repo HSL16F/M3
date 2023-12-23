@@ -28,11 +28,12 @@ def get_stock_data(symbol: str):
 
 
 api_key = "2RLYcjcuOOHnJ1Vw5_jYdsXHTsPlDkXe"
+finnhub_client = finnhub.Client(api_key="clil6rpr01qvsg5971j0clil6rpr01qvsg5971jg")
 
 
 # def polygon_news(ticker):
 #     client = RESTClient(api_key=api_key)
-#
+
 #     print(f"Recent news for {ticker}")
 #     news_articles = {}
 #     for (i, n) in enumerate(client.list_ticker_news(ticker, limit=5)):
@@ -41,7 +42,7 @@ api_key = "2RLYcjcuOOHnJ1Vw5_jYdsXHTsPlDkXe"
 #         news_articles[i] = curr_news
 #         if i == 5:
 #             break
-#
+
 #     return news_articles
 
 
@@ -53,7 +54,7 @@ def get_security_description(ticker):
     :param ticker: Stock ticker symbol as a string.
     :return: A string containing the description of the company.
     """
-    return [f"Ticker: {ticker}", f"Description: {company_info(ticker)}"]
+    return company_info(ticker)
     
 
 # Get current price
@@ -64,8 +65,17 @@ def get_price(ticker):
 
 def get_financials(ticker):
     finnhub_client = finnhub.Client(api_key="clil6rpr01qvsg5971j0clil6rpr01qvsg5971jg")
+    all_fin = finnhub_client.company_basic_financials(ticker, 'all')
+    metrics = ["52WeekHigh", "52WeekLow", "beta", "cashFlowPerShareAnnual", "bookValuePerShareAnnual", "peAnnual", "priceRelativeToS&P50052Week", "totalDebt/totalEquityAnnual", "totalDebt/totalEquityQuarterly", "yearToDatePriceReturnDaily"]
+    metric_dict = {}
+    for metric in metrics:
+        metric_dict[metric] = all_fin['metric'][metric]
+    return {"selected_fundemental_data": metric_dict, "peers": finnhub_client.company_peers(ticker)}
 
-    return finnhub_client.company_basic_financials('AAPL', 'all')
+def associated_data_func(ticker):
+    output_dict = {}
+    output_dict["peers"] = finnhub_client.company_peers(ticker)
+    return output_dict
 
 
 # Example usage

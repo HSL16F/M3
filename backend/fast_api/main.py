@@ -1,7 +1,12 @@
 import fastapi.middleware.cors
 import yfinance as yf
 from fastapi import FastAPI
+import finnhub
+
 # from polygon import RESTClient
+
+finnhub_api_key = "clil6rpr01qvsg5971j0clil6rpr01qvsg5971jg"
+finnhub_client = finnhub.Client(api_key=finnhub_api_key)
 
 # Custom functions
 from functions import *
@@ -67,6 +72,39 @@ def hello_world():
 def descript_call(symbol: str):
     data = get_security_description(symbol)
     return {"Security": symbol.upper(), "Data": data}
+
+"""
+Returns various data on the stock
+General structure
+{
+    stock: TICKER,
+    description: descriptipn
+    financial_data: {
+        52high
+        52low
+        beta
+        etc
+    }
+    associated_data: {
+        company classifcations: {
+            industry
+            sector
+            hq
+            ...
+        }
+        peers: related_companies
+    }
+}
+"""
+@app.get("/stocks/financial_data/{symbol}")
+def financial_data(symbol: str):
+    output = {
+            "stock": symbol.upper(),
+            "description": get_security_description(symbol),
+            "financial": get_financials(symbol),
+            "associated_data": associated_data_func(symbol)
+            }
+    return(output)
 
 # @api.get("/news/{ticker}")
 # def news(ticker: str):
