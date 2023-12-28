@@ -81,3 +81,7 @@ def associated_data_func(ticker):
 # Example usage
 # print(get_security_description(ticker))
 # print(get_stock_data(ticker))
+
+
+# Economic data
+# Call some economic data api

@@ -106,6 +106,10 @@ def financial_data(symbol: str):
             }
     return(output)
 
+
+@app.get("/economics/australia")
+def economic_data_aus():
+    return "Hello there"
 # @api.get("/news/{ticker}")
 # def news(ticker: str):
 #     news_articles = polygon_news(ticker)
