@@ -44,6 +44,70 @@ def get_stock_data(symbol: str):
 
 api_key = "2RLYcjcuOOHnJ1Vw5_jYdsXHTsPlDkXe"
 
+# Standard test securities
+us_stocks = [
+    "AAPL",  # Apple Inc.
+    "MSFT",  # Microsoft Corporation
+    "AMZN",  # Amazon.com Inc.
+    "GOOGL", # Alphabet Inc. (Google)
+    "FB",    # Meta Platforms Inc. (formerly Facebook)
+    "TSLA",  # Tesla Inc.
+    "BRK.B", # Berkshire Hathaway Inc.
+    "JPM",   # JPMorgan Chase & Co.
+    "JNJ",   # Johnson & Johnson
+    "V",     # Visa Inc.
+    "WMT",   # Walmart Inc.
+    "PG",    # Procter & Gamble
+    "MA",    # Mastercard Incorporated
+    "UNH",   # UnitedHealth Group Incorporated
+    "DIS",   # The Walt Disney Company
+    "NVDA",  # NVIDIA Corporation
+    "HD",    # Home Depot Inc.
+    "BAC",   # Bank of America Corp
+    "VZ",    # Verizon Communications Inc.
+    "INTC"   # Intel Corporation
+]
+
+indices = [
+    "SPX",   # S&P 500 Index
+    "DJI",   # Dow Jones Industrial Average
+    "IXIC",  # NASDAQ Composite Index
+    "RUT",   # Russell 2000 Index
+    "VIX"    # CBOE Volatility Index
+]
+
+commodities = [
+    "GC=F",  # Gold Futures
+    "SI=F",  # Silver Futures
+    "CL=F",  # Crude Oil Futures
+    "NG=F",  # Natural Gas Futures
+    "ZC=F"   # Corn Futures
+]
+
+alpha_vantage_functions = {
+    "daily_time_series": "TIME_SERIES_DAILY",
+    "intraday_time_series": "TIME_SERIES_INTRADAY",
+    "weekly_time_series": "TIME_SERIES_WEEKLY",
+    "monthly_time_series": "TIME_SERIES_MONTHLY",
+    # Add more time series functions as needed
+}
+
+# Note many of these are from FRED, and can custom made
+alpha_vantage_commodities = {
+    "gold": "CURRENCY_EXCHANGE_RATE",  # As an example, for commodity you might need to use a different approach or API endpoint
+    "crude_oil": "WTI",
+    "oil": "BRENT",  
+    "gas": "NATURAL_GAS",
+    "copper": "COPPER",
+    "aluminum": "ALUMINUM",
+    "wheat": "WHEAT",
+    "corn": "CORN",
+    "cotton": "COTTON",
+    "sugar": "SUGAR",
+    "coffee": "COFFEE",
+    # Add more commodities as needed
+}
+
 
 # def polygon_news(ticker):
 #     client = RESTClient(api_key=api_key)
@@ -110,6 +174,26 @@ def financial_data(symbol: str):
 @app.get("/economics/australia")
 def economic_data_aus():
     return "Hello there"
+
+# Indicators and stocks
+@app.get("/indices_benchmarks/{indice_benchmark_var}")
+def economic_data_aus(indice_benchmark_var: str):
+    # Call function for the benchmark
+    response = get_market_data(alpha_vantage_api_key, indice_benchmark_var)
+    return response
+
+# Indicators
+@app.get("/commodities/{commodity}")
+def economic_data_aus(commodity: str):
+    # Call function for the benchmark
+    commodity = commodity.upper()
+    if commodity not in alpha_vantage_commodities.values():
+        return f"Commodity: {commodity} not tracked, please write another"
+    else:
+        response = get_commdity_data(alpha_vantage_api_key, commodity)
+        return response
+
+
 # @api.get("/news/{ticker}")
 # def news(ticker: str):
 #     news_articles = polygon_news(ticker)

@@ -29,7 +29,9 @@ def get_stock_data(symbol: str):
 
 api_key = "2RLYcjcuOOHnJ1Vw5_jYdsXHTsPlDkXe"
 finnhub_client = finnhub.Client(api_key="clil6rpr01qvsg5971j0clil6rpr01qvsg5971jg")
-
+alpha_vantage_api_key = "UYYYLGQI0REM0CR5"
+quandl_api_key = "7ubNoNSSYwjuMtHLJ18z"
+FRED_api_key = "d4d01db978b5cabd45c025837c5e290a"
 
 # def polygon_news(ticker):
 #     client = RESTClient(api_key=api_key)
@@ -77,6 +79,47 @@ def associated_data_func(ticker):
     output_dict["peers"] = finnhub_client.company_peers(ticker)
     return output_dict
 
+
+def get_market_data(api_key, symbol):
+    """
+    Fetches market data for a given symbol from Alpha Vantage.
+
+    Args:
+    api_key (str): Your Alpha Vantage API key.
+    symbol (str): The market index symbol.
+
+    Returns:
+    dict: The market data.
+    """
+    url = f"https://www.alphavantage.co/query"
+    params = {
+        "function": "TIME_SERIES_DAILY",
+        "symbol": symbol,
+        "apikey": api_key
+    }
+
+    response = requests.get(url, params=params)
+    
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return f"Error: {response.status_code}"
+
+
+def get_commdity_data(api_key, function):
+    url = "https://www.alphavantage.co/query"
+    params = {
+        "function": function,
+        "time_series": "&interval=monthly",
+        "apikey": api_key,
+    }
+
+    response = requests.get(url, params=params)
+
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return f"Error: {response.status_code}"
 
 # Example usage
 # print(get_security_description(ticker))
