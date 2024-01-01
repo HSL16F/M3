@@ -128,3 +128,41 @@ def get_commdity_data(api_key, function):
 
 # Economic data
 # Call some economic data api
+# call fed data, note post not working right now
+def call_usaspending_api(endpoint, agency_code=None, method='GET', data=None, params=None):
+    BASE_URL = "https://api.usaspending.gov"
+    # Replace placeholder in the endpoint with the actual agency code if provided
+    if agency_code:
+        endpoint = endpoint.replace('<TOPTIER_AGENCY_CODE>', agency_code)
+
+    # Construct the full URL
+    url = f"{BASE_URL}{endpoint}"
+
+    # Perform the request based on the method
+    if method.upper() == 'GET':
+        response = requests.get(url, params=params)
+    elif method.upper() == 'POST':
+        response = requests.post(url, json=data)
+    else:
+        raise ValueError("Method must be 'GET' or 'POST'.")
+
+    # Check the status code and return the JSON response if successful
+    if response.ok:
+        return response.json()
+    else:
+        # Raise an exception or handle it as you see fit
+        response.raise_for_status()
+    return "Error in function, endpoint not called, check internet connection or possible other bug"
+
+# Example call
+# usa_spending_endpoints_df = pd.read_csv("USAspending_api_endpoints.csv", index_col="Unnamed: 0")
+# agency_codes_df = pd.read_csv("USAspending_callable_agency_processed.csv", index_col="Unnamed: 0")
+# agency_codes_df = agency_codes_df.drop(columns="Unnamed: 0")
+# agency_codes_dict = agency_codes_df.to_dict()["Agency_Code"]
+# Note if length 1, then convert to 00X, length 2, convert to 0XX, and remain same for length 3
+# code = str(agency_codes_df.to_dict()["Agency_Code"]["Department of Commerce"])
+# if len(code) == 1:
+#   code = f"00{code}"
+# elif len(code) == 2:
+#   code = f"0{code}"
+# call_usaspending_api(usa_spending_endpoints_df.iloc[1]["Endpoint"], agency_code='code')
