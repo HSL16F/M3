@@ -1,0 +1,35 @@
+{
+    "Transportation": [
+      "Automobiles (Cars, Trucks, Buses)",
+      "Aircraft",
+      "Ships and Boats",
+      "Railroad Equipment (Locomotives, Rail Cars)",
+      "Bicycles and Motorbikes",
+      "Electric Vehicles (EVs)",
+      "Hybrid Vehicles",
+      "Spacecraft",
+      "Drones",
+      "Automotive Parts",
+      "Aircraft Parts",
+      "Marine Equipment",
+      "Railroad Tracks and Components",
+      "Batteries for Electric Vehicles",
+      "Aviation Fuel",
+      "Diesel Fuel",
+      "Gasoline",
+      "Biofuels",
+      "Lubricants",
+      "Tires",
+      "Navigation Systems",
+      "Telematics Equipment",
+      "Safety Equipment (Airbags, Seatbelts)",
+      "Exhaust Systems",
+      "Electric Motors",
+      "Hydrogen Fuel Cells",
+      "Charging Stations",
+      "Public Transportation Infrastructure (Bus Stops, Train Stations)",
+      "Traffic Management Systems",
+      "Transportation-related Software (Fleet Management, Logistics)"
+    ]
+  }
+  

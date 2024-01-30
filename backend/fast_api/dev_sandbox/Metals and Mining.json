@@ -1,0 +1,71 @@
+{
+    "Metals and Mining": {
+      "Metallic Minerals": [
+        "Chromite",
+        "Cobalt",
+        "Copper",
+        "Gold",
+        "Lead-Zinc",
+        "Zinc",
+        "Molybdenum",
+        "Nickel",
+        "Silver",
+        "Tin",
+        "Manganese",
+        "Iron ore (Hematite)",
+        "Iron ore (Magnetite)"
+      ],
+      "Energy Minerals": [
+        "Coal",
+        "Uranium"
+      ],
+      "Industrial Minerals": [
+        "Asbestos",
+        "Barite",
+        "Beryl",
+        "Celestite",
+        "Corundum",
+        "Diamond",
+        "Steel",
+        "Dolomite (industrial)",
+        "Feldspar",
+        "Flint",
+        "Fluorite",
+        "Garnet",
+        "Graphite",
+        "Gypsum (industrial)",
+        "Heavy minerals",
+        "Iron oxide pigments",
+        "Kaolin",
+        "Limestone (industrial)",
+        "Magnesite",
+        "Mica",
+        "Palygorskite",
+        "Phosphate",
+        "Lithium",
+        "Rare Earth Elements",
+        "Salt",
+        "Silica",
+        "Sillimanite",
+        "Kyanite",
+        "Andulasite",
+        "Sulfur",
+        "Talc",
+        "Vermiculite",
+        "Wollastonite"
+      ],
+      "Extractive Minerals": [
+        "Construction materials",
+        "Gypsum (extractive)",
+        "Dimension stone",
+        "Limestone (extractive)"
+      ],
+      "Gemstones": [
+        "Beryl",
+        "Chrysoprase",
+        "Corundum",
+        "Diamond"
+      ]
+    }
+  }
+  
