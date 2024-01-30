@@ -1,0 +1,675 @@
+{
+    "WHEAT & PRODUCTS": [
+        "WHEAT",
+        "FLOUR WHEAT",
+        "BRAN WHEAT",
+        "MACARONI",
+        "GERM WHEAT",
+        "BREAD",
+        "BULGUR",
+        "PASTRY",
+        "WHEAT,STARCH",
+        "WHEAT GLUTEN",
+        "BREAKFAST CEREALS",
+        "WAFERS",
+        "MIXES AND DOUGHS",
+        "FOOD PREPARATIONS OF FLOUR MEAL OR MALT EXTRACT"
+    ],
+    "RICE & PROD (MILLED EQ.)": [
+        "RICE, PADDY",
+        "RICE,HUSKED",
+        "MILLED RICE FROM IMPORTED HUSKED RICE",
+        "MILLLED PADDY RICE",
+        "RICE,BROKEN",
+        "RICE GLUTEN",
+        "RICE,STARCH",
+        "BRAN RICE",
+        "RICE FLOUR"
+    ],
+    "BARLEY & PRODUCTS": [
+        "BARLEY",
+        "POT BARLEY",
+        "BARLEY,PEARLED",
+        "BRAN BARLEY",
+        "BARLEY FLOUR AND GRITS",
+        "MALT BARLEY",
+        "MALT EXTRACT"
+    ],
+    "MAIZE & PRODUCTS": [
+        "MAIZE",
+        "GERM MAIZE",
+        "FLOUR MAIZE",
+        "BRAN MAIZE",
+        "MAIZE GLUTEN",
+        "STARCH MAIZE",
+        "GLUTEN FEED & MEAL"
+    ],
+    "RYE & PRODUCTS": [
+        "RYE",
+        "FLOUR RYE",
+        "BRAN RYE"
+    ],
+    "OATS & PRODUCTS": [
+        "OATS",
+        "ROLLED OATS",
+        "BRAN OATS"
+    ],
+    "MILLET & PRODUCTS": [
+        "MILLET",
+        "FLOUR MILLET",
+        "BRAN MILLET"
+    ],
+    "SORGHUM & PRODUCTS": [
+        "SORGHUM",
+        "FLOUR SORGHUM",
+        "BRAN SORGHUM"
+    ],
+    "CEREALS,OTHERS &PRODUCTS": [
+        "POP CORN",
+        "BUCKWHEAT",
+        "FLOUR BUCKWHEAT",
+        "BRAN BUCKWHT",
+        "QUINOA",
+        "FONIO",
+        "FLOUR FONIO",
+        "BRAN FONIO",
+        "TRITICALE",
+        "FLOUR TRITICALE",
+        "BRAN TRITICALE",
+        "CANARY SEED",
+        "MIXED GRAIN",
+        "FLOUR OF MIXED GRAIN",
+        "BRAN MIXED GRAIN",
+        "CEREALS - NOT ELSEWHERE SPECIFIED ( hereafter: NES)",
+        "FLOUR CEREAL",
+        "BRAN CEREAL",
+        "CEREAL PREPARATIONS NES"
+    ],
+    "POTATOES & PRODUCTS": [
+        "POTATOES",
+        "FLOUR POTATOES",
+        "FROZ POTATOES",
+        "POTATO STARCH",
+        "POTATO TAPIOCA"
+    ],
+    "CASSAVA & PRODUCTS": [
+        "CASSAVA",
+        "CASSAVA TAPIOCA",
+        "CASSAVA DRIED.",
+        "CASSAVA STARCH"
+    ],
+    "SWEET POTATOES": [
+        "SWEET POTATO"
+    ],
+    "ROOTS & TUBERS, OTHER": [
+        "YAUTIA (COCOYAM.)",
+        "TARO",
+        "ROOTS & TUBERS NES",
+        "FLOUR OF ROOTS & TUBERS",
+        "ROOTS & TUBERS DRIED"
+    ],
+    "YAMS": [
+        "YAMS"
+    ],
+    "SUGAR CANE": [
+        "SUGAR CANE"
+    ],
+    "SUGAR BEETS": [
+        "SUGAR BEETS"
+    ],
+    "SUGAR, NON-CENTRIFUGAL": [
+        "SUGAR, NON-CENTRIFUGAL"
+    ],
+    "SUGAR & PROD. (RAW EQUIVALENT.)": [
+        "CANE SUGAR",
+        "BEET SUGAR",
+        "SUGAR, CENTRIFUGAL RAW",
+        "SUGAR REFIND",
+        "SUGAR CONFECTIONARY",
+        "SUGARS FLAVOURED"
+    ],
+    "SWEETENERS, OTHER & PRODUCTS": [
+        "FRUCTOSE",
+        "MALTOSE",
+        "MAPLE SUGAR",
+        "SUGAR CROPS",
+        "MOLASSES",
+        "OTHER FRUCTOSE",
+        "SUGAR NES",
+        "GLUCOSE & DEXTROSE",
+        "LACTOSE",
+        "ISOGLUCOSE",
+        "BEVERAGES NON-ALCHOLIC"
+    ],
+    "BEANS, DRY & PRODUCTS": [
+        "BEANS, DRY"
+    ],
+    "PEAS, DRY & PRODUCTS": [
+        "PEAS, DRY"
+    ],
+    "PULSES, OTHER & PROD.": [
+        "BROAD BEANS, DRY",
+        "CHICK-PEAS",
+        "COW PEAS,DRY",
+        "PIGEON PEAS",
+        "LENTILS",
+        "BAMBARA BEANS",
+        "VETCHES",
+        "LUPINS",
+        "PULSES NES",
+        "FLOUR OF PULSES",
+        "BRAN OF PULSES"
+    ],
+    "NUTS & PRODUCTS": [
+        "BRAZIL NUTS",
+        "CASHEW NUTS",
+        "CHESTNUTS",
+        "ALMONDS",
+        "WALNUTS",
+        "PISTACHIOS",
+        "KOLANUTS",
+        "HAZELNUTS",
+        "ARECANUTS",
+        "BRAZILNUTS",
+        "CASHEW NUTS",
+        "ALMONDS",
+        "WALNUTS",
+        "HAZELNUTS",
+        "NUTS NES",
+        "PREPARED NUTS"
+    ],
+    "SOYABEANS & PRODUCTS": [
+        "SOYBEANS",
+        "SOYA SAUCE",
+        "SOYA PASTE",
+        "SOYA CURD"
+    ],
+    "GROUNDNUTS": [
+        "GROUNDNUTS",
+        "GROUNDNT SHELLED",
+        "PREPARED GROUNDNUTS"
+    ],
+    "SUNFLOWER SEED": [
+        "SUNFLOWER SEED"
+    ],
+    "RAPE, MUSTARD SEEDS": [
+        "RAPESEED",
+        "MUSTARD SEED",
+        "FLOUR MUSTARD SEED"
+    ],
+    "COTTONSEED": [
+        "COTTONSEED"
+    ],
+    "COCONUTS & COPRA": [
+        "COCONUTS",
+        "COCONUTS,DESSSICATED",
+        "COPRA"
+    ],
+    "SESAME SEED": [
+        "SESAME SEED"
+    ],
+    "PALMKERNELS": [
+        "OIL PALM FRUIT",
+        "PALM KERNELS"
+    ],
+    "OLIVES": [
+        "OLIVES",
+        "OLIVES PRESERVED"
+    ],
+    "OILCROPS, OTHERS": [
+        "KARITE NUTS",
+        "CASTOR BEANS",
+        "TUNG NUTS",
+        "JOJOBA SEEDS",
+        "SAFFLOWER",
+        "POPPY SEED",
+        "MELONSEED",
+        "TALLOW SEEDS",
+        "KAPOK FRUIT",
+        "KAPOKSEED IN SHELL",
+        "KAPOKSEED SHELLED",
+        "LINSEED",
+        "HEMPSEED",
+        "OILSEEDS NES",
+        "FLOUR AND MEAL OF OILSEEDS"
+    ],
+    "SOYABEAN OIL": [
+        "OIL SOYABEAN"
+    ],
+    "GROUNDNUT OIL": [
+        "OIL GROUNDNUTS"
+    ],
+    "SUNFLOWERSEED OIL": [
+        "OIL SUNFLOWER SEED"
+    ],
+    "RAPE & MUSTARD OIL": [
+        "OIL RAPESEED",
+        "OIL MUSTARD SEED"
+    ],
+    "COTTONSEED OIL": [
+        "OIL COTTONSEED"
+    ],
+    "PALM KERNEL OIL": [
+        "OIL OF PALM KERNEL"
+    ],
+    "PALM OIL": [
+        "PALM OIL",
+        "FATTY ACIDS",
+        "RESIDUE FATTY SUBSTANCES"
+    ],
+    "OIL OF COCONUTS": [
+        "OIL COCONUTS"
+    ],
+    "SESAMESEED OIL": [
+        "SESAMESEED OIL"
+    ],
+    "OLIVE & RESIDUE, OIL": [
+        "OLIVE OIL",
+        "OIL OLIVERES"
+    ],
+    "RICE, BRAN OIL": [
+        "RICE BRAN OIL"
+    ],
+    "MAIZE, GERM OIL": [
+        "MAIZE GERM OIL"
+    ],
+    "OILCROPS, OTHER OIL": [
+        "KARITE NUTS BUTTER",
+        "OIL CASTOR BEANS",
+        "TUNG OIL",
+        "JOJOBA OIL",
+        "OIL SAFFLOWER",
+        "OIL POPPY SEED",
+        "VEGETABLE TALLOW",
+        "STILLING OIL",
+        "OIL OF KAPOK SEED",
+        "OIL LINSEED",
+        "OIL HEMPSD",
+        "OIL VEGETABLE ORIGIN NES",
+        "COCOA BUTTER",
+        "LIQUID MARGARINE",
+        "MARGARINE",
+        "OILS BOILED",
+        "OILS HYDROGENATED"
+    ],
+    "TOMATOES & PRODUCTS": [
+        "TOMATOES",
+        "TOMATO JUICE CONCENTRATED",
+        "TOMATO JUICE SINGLE STRENGTH (SS)",
+        "TOMATO PASTE",
+        "PEELED TOMATO"
+    ],
+    "ONIONS, DRY": [
+        "ONIONS, DRY"
+    ],
+    "VEGETABLES, OTHER & PRODUCTS": [
+        "CABBAGES",
+        "ARTICHOKES",
+        "ASPARAGUS",
+        "LETTUCE",
+        "SPINACH",
+        "CASSAVA LEAVES",
+        "CAULIFLOWER",
+        "PUMPKIN & SQUASH &GOURDS",
+        "CUCUMBER & GHERKINS",
+        "EGGPLANTS",
+        "CHILLIES & PEPPERS ,GREEN",
+        "ONIONS, GREEN",
+        "GARLIC",
+        "LEEKS",
+        "BEANS, GREEN",
+        "PEAS, GREEN",
+        "BROAD BEAN,GRN",
+        "STRING BEANS",
+        "CARROTS",
+        "OKRA",
+        "GREEN CORN",
+        "SWEET CORN FROZEN",
+        "SWEET CORN PRESERVED",
+        "MUSHROOMS",
+        "DRIED MUSHROMS",
+        "CANNED MUSHROOMS",
+        "CHICORY ROOTS",
+        "CAROBS",
+        "VEGETABLES FROZRN",
+        "VEGET DRIED NES",
+        "VEGETABLES CANNED NES",
+        "JUICE OF VEGETABLES NES",
+        "VEGS DEHYDROGENATED",
+        "VEGETABLES IN VINEGAR",
+        "VEGS PRESERVED NES",
+        "VEGETABLES FROZEN",
+        "VEGS TEMPORARY PRESERVED",
+        "VEGETABLE PREPARATIONS",
+        "CHICORY & COFFEE SUBSTITUTES"
+    ],
+    "ORANGES,TANGARINES & MANDARINES &PRODUCTS": [
+        "ORANGES",
+        "ORANGE JUICE SS",
+        "ORANGE JUICE CONCENTRTATED",
+        "TANGERINES",
+        "TANGERINE JUICE"
+    ],
+    "LEMONS, LIMES & PROD.": [
+        "LEMONS LIMES",
+        "LEMON JUICE SS",
+        "LEMON JUICE CONCENTRATED"
+    ],
+    "GRAPEFRUIT & PRODUCTS": [
+        "GRAPE FRUIT JUICE SS",
+        "GRAPEFRUIT JUICE CONCENTRATED"
+    ],
+    "CITRUS FRUIT NES & PROD": [
+        "CITRUS FRUIT NES",
+        "CITRUS JUICE SS",
+        "CITRUS JUICE CONCENTRATED"
+    ],
+    "BANANA": [
+        "BANANAS"
+    ],
+    "PLANTAINS": [
+        "PLANTAINS"
+    ],
+    "APPLES & PRODUCTS": [
+        "APPLES",
+        "APPLE JUICE SS",
+        "APPLE JUICE CONCENTRATED"
+    ],
+    "PINEAPPLES & PRODUCTS": [
+        "PINEAPPLES",
+        "PINEAPPL CANNED",
+        "PINEAPPLE JUICE SS",
+        "PINEAPPLE JUICE CONCENTRATED"
+    ],
+    "DATES": [
+        "DATES"
+    ],
+    "GRAPES & PROD(EXCL.WINE": [
+        "GRAPES",
+        "RAISINS",
+        "GRAPE JUICE",
+        "MUST OF GRAPES"
+    ],
+    "FRUIT, OTHER & PRODUCTS": [
+        "PEARS",
+        "QUINCES",
+        "APRICOTS",
+        "DRY APRICOTS",
+        "SOUR CHERRY",
+        "CHERRIES",
+        "PEACHES",
+        "PLUMS",
+        "PLUMS, DRIED",
+        "PLUM JUICE SS",
+        "PLUM JUICE CONCENTRATED",
+        "STONE FRUIT",
+        "POMME FRUIT",
+        "STRAWBERRIES",
+        "RASPBERRIES",
+        "GOOSEBERRIES",
+        "CURRANTS",
+        "BLUEBERRIES",
+        "CRANBERRIES",
+        "BERRIES NES",
+        "WATERMELONS",
+        "MELONS",
+        "FIGS",
+        "FIGS, DRIED",
+        "MANGOES",
+        "AVOCADOS",
+        "MANGO JUICE",
+        "PERSIMMONS",
+        "CASHEWAPPLE",
+        "KIWI",
+        "PAPAYAS",
+        "FRUIT TROPICAL NES",
+        "FRUIT TROPICAL DRY NES",
+        "FRUIT NES",
+        "FRUIT DRY NES",
+        "FRUIT JUICE",
+        "FRUIT PRESERVED NES",
+        "FLOUR OF FRUIT",
+        "FRUIT NUTS PEELED & PRESERVED",
+        "FRUIT HOMOGONIZED"
+    ],
+    "COFFEE & PRODUCTS": [
+        "COFFEE,GREEN",
+        "COFFEE ROASTED",
+        "COFFEE EXTRACTS"
+    ],
+    "COCOA BEANS & PRODUCTS": [
+        "COCOA BEANS",
+        "COCOA PASTE",
+        "COCOA POWDER",
+        "CHOCOLATE PRODUCTS"
+    ],
+    "TEA": [
+        "TEA",
+        "EXTRACT TEA,",
+        "MATE"
+    ],
+    "PEPPER": [
+        "PEPPER BLACK WHITE"
+    ],
+    "PIMENTO": [
+        "PIMENTO"
+    ],
+    "CLOVES": [
+        "CLOVES"
+    ],
+    "SPICES, OTHER": [
+        "VANILLA",
+        "CINNAMON",
+        "NUTMEG",
+        "ANISE",
+        "GINGER",
+        "SPICES NES"
+    ],
+    "WINE": [
+        "WINE",
+        "VERMOUTHSL"
+    ],
+    "BARLEY, BEER": [
+        "BEER BARLEY"
+    ],
+    "BEVERAGES FERMENTED": [
+        "WHEAT FERMENTED BEVERAGES",
+        "RICE FERMENTED BEVERAGES",
+        "BEER MAIZE",
+        "BEER MILLET",
+        "BEER SORGHUM",
+        "BEVERAGES FERMENTED"
+    ],
+    "BEVERAGES DISTILLED ALCOHOLIC": [
+        "BEVERAGES DISTILLED ALCOHOLIC"
+    ],
+    "INFANT FOOD": [
+        "INFANT FOOD"
+    ],
+    "MEAT & PRODUCTS, BOVINE": [
+        "BEEF VEAL",
+        "BEEF BONLESS",
+        "BEEF DRIED SALTED SMOKEDS",
+        "MEAT EXTRACTS",
+        "SAUSAGE BEEF",
+        "BEEF PREPARATIONS",
+        "BEEF CANNED",
+        "MEAT HOMOGENIZED",
+        "BUFFALO MEAT"
+    ],
+    "MEAT & PRODUCTS, SHEEP&GOAT": [
+        "MUTTON LAMB",
+        "GOAT MEAT"
+    ],
+    "MEAT & PRODUCTS, PIG": [
+        "PIGMEAT",
+        "PORK",
+        "SAUSAGES PIG",
+        "MEAT PREPARATONS PIG"
+    ],
+    "MEAT & PRODUCTS, POULTRY": [
+        "CHICKEN MEAT",
+        "FAT LIVER PREPARATIONS",
+        "MEAT CANNED CHICKEN",
+        "DUCK MEAT",
+        "GOOSE MEAT",
+        "TURKEY MEAT"
+    ],
+    "MEAT & PROD, OTHER ANIM": [
+        "MEAT POULTRY",
+        "HORSEMEAT",
+        "MEAT ASSES",
+        "MEAT MULES",
+        "MEAT CAMEL",
+        "RABBIT MEAT",
+        "MEAT RODENTS",
+        "MEAT OTHER CAMELIDS",
+        "GAME MEAT",
+        "MEAT DRY NES",
+        "MEAT NES",
+        "MEAT PREPARED NES",
+        "SNAILS NOT SHELLED"
+    ],
+    "OFFALS, EDIBLE": [
+        "OFFALS CATTLE",
+        "LIVER PREPARATIONS",
+        "OFFAL BUFFALO",
+        "OFFALS SHEEP",
+        "OFFALS GOATS",
+        "OFFALS PIGS",
+        "OFFAL CHICKEN",
+        "OFFALS LIVER GOOSE",
+        "OFFALS LIVER DUCK",
+        "OFFALS LIVER TURKEY",
+        "OFFALS HORSE",
+        "OFFALS CAMELS",
+        "OFFALS CAMELIDS",
+        "OFFALS NES"
+    ],
+    "FATS, ANIMALS, RAW": [
+        "FAT CATTLE",
+        "CATTLE BUTCHER FAT",
+        "FAT BUFFALO",
+        "FAT OF SHEEP",
+        "FAT OF GOATS",
+        "FAT PIGS",
+        "PIG BUTCHER FAT",
+        "LARD",
+        "FAT POULTRY",
+        "FAT R POULTRY",
+        "FAT CAMEL",
+        "FAT OTH CAMERLIDS",
+        "OILS ANIMAL",
+        "STEARINE",
+        "DEGRAS",
+        "TALLOW",
+        "FATS PREPARATIONS NES"
+    ],
+    "BUTTER ,GHEE": [
+        "BUTTER, COWS",
+        "GHEE, COWS",
+        "BUTTER BUFFALO",
+        "GHEE BUFFALO",
+        "BUTTER SHEEP",
+        "BUTTER, GOAT"
+    ],
+    "CREAM": [
+        "CREAM, FRESH"
+    ],
+    "EGGS & PRODUCTS": [
+        "EGG ALBUMINE",
+        "HEN EGGS",
+        "EGGS LIQUID HEN",
+        "EGGS DRY HEN",
+        "EGGS POULTRY"
+    ],
+    "HONEY": [
+        "HONEY"
+    ],
+    "MEAT & BLOOD MEAL": [
+        "MEAT MEAL",
+        "BLOOD MEAL"
+    ],
+    "MILK & PRODUCTS (EXCLUDING BUTTER)": [
+        "COW MILK",
+        "SKIMMED MILK OF COWS",
+        "WHOLE MILK,CONDENSED",
+        "WHEY,CONDENSED",
+        "YOGHURT",
+        "YOGHURT CONCENTRATED",
+        "BUTTERMILK ,CURD",
+        "WHOLE MILK,EVAPORATED",
+        "SKIMMED MILK EVAPORATED",
+        "SKIMMED MILK CONDENSED",
+        "COW MILK DRY",
+        "MILK SKIMMED DRY CONCENTRATED",
+        "DRY WHEY",
+        "CHEESE WHOLE COW MILK",
+        "WHEY, FRESH",
+        "CHEESE SKIMMED COW MILK",
+        "WHEY CHEESE",
+        "PROCESSED CHEESE",
+        "RECONSTITUTED MILK",
+        "ICE CREAM",
+        "CASEIN",
+        "BUFFALO MILK",
+        "SKIMMED BUFFALO MILK",
+        "CHEESE OF BUFFALO MILK",
+        "SHEEP MILK",
+        "SHEEP CHEESE",
+        "SKIMMED SHEEP MILK",
+        "GOAT MILK",
+        "CHEESE OF GOAT MILK",
+        "SKIMMED GOAT MILK",
+        "CAMEL MILK"
+    ],
+    "CRUSTACEANS & PRODUCTS": [
+        "CRSTACEANS ( CRSTC) FRESH",
+        "CRSTC FROZEN",
+        "CRSTC CURED",
+        "CRSTC CANNED",
+        "CRSTC PRESERVED (PR) NES",
+        "CRSTC MEALS",
+        "CEPHLP FRESH",
+        "CPHLP FROZEN",
+        "CPHLP CURED",
+        "CPHLP CANNED",
+        "CPHLP PR NES",
+        "CPHLP MEALS"
+    ],
+    "MOLLUSCS OTHER &PRODUCT": [
+        "MOLLUSCS ( MOLSC) FRESH",
+        "MOLSC FROZEN",
+        "MOLSC CURED",
+        "MOLSC CANNED",
+        "MOLSC MEALS"
+    ],
+    "AQUATIC MAMMALS MEAT": [
+        "AQUATIC (AQ) MAMMALS (M) MEAT",
+        "AQ M PREP NES"
+    ],
+    "AQUATIC ANIMAL OTHERS": [
+        "AQ ANIM FRESH",
+        "AQ A CURED",
+        "AQ A MEALS",
+        "AQ A PREPARATIONS NS"
+    ],
+    "AQUATIC PLANTS & PROD.": [
+        "AQ PLANTS",
+        "AQ PLANTS DRIED",
+        "AQ PLANTS PREPARATIONS NES"
+    ],
+    "FISH BODY OIL": [
+        "FISH BODY OILS",
+        "DEMERSAL ( DMRS) BODY OIL",
+        "PELAGIC BODY OIL",
+        "MARINE BODY OIL",
+        "AQ M OILS"
+    ],
+    "FISH LIVER OILS": [
+        "FISH LIVER OILS",
+        "DMRS LVR OIL",
+        "PELAGIC LIVER OIL",
+        "MARINE LIVER OIL"
+    ]
+}
